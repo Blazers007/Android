@@ -1,0 +1,876 @@
+<LinearLayout
+            android:id="@+id/College_SXY_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/ImageView10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/group_button11" />
+
+                <View
+                        android:layout_width="2px"
+                        android:layout_height="fill_parent"
+                        android:background="?android:attr/listDivider" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="院系: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="部门:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="负责人:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="联系:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="状态:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView92"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="电子信息工程学院"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="中文辩论队"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="13dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="王超 白进 付心怡"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="13813813888"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView99"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:gravity="center|center_vertical"
+                        android:text="招新中!"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+<LinearLayout
+            android:id="@+id/College_SXY_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/ImageView10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/group_button11" />
+
+                <View
+                        android:layout_width="2px"
+                        android:layout_height="fill_parent"
+                        android:background="?android:attr/listDivider" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="院系: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="部门:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="负责人:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="联系:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="状态:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView92"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="电子信息工程学院"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="通讯部"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="13dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="XX XX XX"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="13813813888"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView99"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:gravity="center|center_vertical"
+                        android:text="招新中!"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+<LinearLayout
+            android:id="@+id/College_SXY_03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/ImageView10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/group_button11" />
+
+                <View
+                        android:layout_width="2px"
+                        android:layout_height="fill_parent"
+                        android:background="?android:attr/listDivider" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="院系: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="部门:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="负责人:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="联系:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="状态:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView92"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="电子信息工程学院"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="组织部"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="13dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="XXXXXX xxXXXXX"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="13813813888"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView99"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:gravity="center|center_vertical"
+                        android:text="招新中!"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+<LinearLayout
+            android:id="@+id/College_SXY_04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/ImageView10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/group_button11" />
+
+                <View
+                        android:layout_width="2px"
+                        android:layout_height="fill_parent"
+                        android:background="?android:attr/listDivider" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="院系: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="部门:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="负责人:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="联系:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="状态:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView92"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="电子信息工程学院"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="记者团"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="13dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="XX XX XXXX"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="13813813888"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView99"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:gravity="center|center_vertical"
+                        android:text="招新中!"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+<LinearLayout
+            android:id="@+id/College_SXY_05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/ImageView10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/group_button11" />
+
+                <View
+                        android:layout_width="2px"
+                        android:layout_height="fill_parent"
+                        android:background="?android:attr/listDivider" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="院系: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="部门:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="负责人:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="联系:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="状态:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView92"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="电子信息工程学院"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="文艺部"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="13dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="王超 白进 付心怡"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="13813813888"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView99"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:gravity="center|center_vertical"
+                        android:text="招新中!"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+<LinearLayout
+            android:id="@+id/College_SXY_06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/ImageView10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/group_button11" />
+
+                <View
+                        android:layout_width="2px"
+                        android:layout_height="fill_parent"
+                        android:background="?android:attr/listDivider" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="院系: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="部门:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="负责人:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="联系:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TextView97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="状态:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView92"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="电子信息工程学院"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="有关部门"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="13dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="王超 白进 付心怡"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:gravity="center|center_vertical"
+                        android:text="13813813888"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2px"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/TextView99"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:gravity="center|center_vertical"
+                        android:text="招新中!"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>

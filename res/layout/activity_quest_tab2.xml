@@ -1,0 +1,566 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="10dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".QuestTab2Activity" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+                
+                <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame1"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Gruop1"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button1"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group1"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame2"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group2"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button2"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group2"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame3"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group3"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button3"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group3"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+              </LinearLayout>
+              
+                <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame4"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Gruop4"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button4"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group4"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame5"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group5"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button5"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group5"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame6"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group6"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button6"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group6"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+              </LinearLayout>
+              
+                <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame7"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group7"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button7"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group7"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame8"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group8"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button8"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group8"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame9"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group9"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button9"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group9"
+                      android:text="游戏迷" />
+
+              </FrameLayout>
+              </LinearLayout>
+              
+                <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame10"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group10"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button10"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group10"
+                      android:text="游戏迷" />
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame11"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+
+                  <ImageButton
+                      android:id="@+id/Quest2_Group11"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button11"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group11"
+                      android:text="游戏迷" />
+              </FrameLayout>
+
+              <FrameLayout
+                  android:id="@+id/Quest2_Frame12"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:padding="3dp" >
+                  <ImageButton
+                     android:id="@+id/Quest2_Group12"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/group_button12"
+                      android:onClick="group"
+                      android:scaleType="centerInside"
+                      android:src="@raw/group12"
+                      android:text="游戏迷" />
+              </FrameLayout>
+              </LinearLayout>
+            </LinearLayout>
+        
+        </ScrollView>
+
+    </FrameLayout>
+
+    <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:paddingTop="5dp" >
+
+        <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="~您的地盘~"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColorHint="#000000" />
+
+        <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="①:  "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="#000000" />
+
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="②:  "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="#000000" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="③:  "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="#000000" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/Quest2_SpanName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="比利王"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/Quest2_SpanName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拉克丝"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/Quest2_SpanName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吉安娜"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 等级: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/TextView05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 等级: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 等级: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/Quest2_SpanLevel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/Quest2_SpanLevel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/Quest2_SpanLevel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 人数: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/TextView05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 人数: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 人数: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/Quest2_SpanNum1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/Quest2_SpanNum2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+                <TextView
+                    android:id="@+id/Quest2_SpanNum3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View  
+                android:layout_width="fill_parent"  
+                android:layout_height="2px" 
+                android:background="?android:attr/listDivider"  />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="search"
+                android:text="刷新" />
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

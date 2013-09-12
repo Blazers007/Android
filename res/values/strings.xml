@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SiasPro</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_class">ClassActivity</string>
+    <string name="title_activity_lesson">LessonActivity</string>
+    <string name="title_activity_quest">QuestActivity</string>
+    <string name="title_activity_match">MatchActivity</string>
+    <string name="update">更新课表</string>
+    <string name="change">切换显示单/双周(学期内换课)</string>
+    <string name="about">帮助说明</string>
+    <string name="findClassRoom">查找教室</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_quest_tab1">QuestTab1Activity</string>
+    <string name="title_activity_quest_tab2">QuestTab2Activity</string>
+    <string name="title_activity_quest_tab3">QuestTab3Activity</string>
+    <string name="title_activity_quest_tab4">QuestTab4Activity</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_friend">FriendActivity</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_group">GroupActivity</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_welcome_scroll_layout">WelcomeScrollLayout</string>
+    <string name="title_activity_rukou">SiasPro</string>
+
+</resources>

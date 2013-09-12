@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+   <!--
+     android:stretchColumns="1"是设置 TableLayout所有行的第二列为扩展列。
+           也就是说如果每行都有三列的话，剩余的空间由第二列补齐
+android:background="@drawable/bg"
+    -->
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:stretchColumns="0,1,2,3" >
+
+        <TableRow android:paddingTop="5dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp" >
+
+                <Button
+                    android:id="@+id/tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/public_twowordsbutton_background_selector"
+                    android:gravity="center"
+                    android:text="社团"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="#ffffff" />
+
+                <View
+                    android:id="@+id/view01"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#FFFFFF" />
+
+            </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical"
+              android:paddingLeft="5dp"
+              android:paddingRight="5dp" >
+
+                <Button
+                    android:id="@+id/tab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/public_twowordsbutton_background_selector"
+                    android:text="山寨"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="#ffffff" />
+
+                <View
+                    android:id="@+id/view02"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#FFFFFF" />
+
+            </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:orientation="vertical"
+     android:paddingLeft="5dp"
+     android:paddingRight="5dp" >
+
+                <Button
+                    android:id="@+id/tab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/public_twowordsbutton_background_selector"
+                    android:text="二手"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="#ffffff" />
+
+                <View
+                    android:id="@+id/view03"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#FFFFFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp" >
+
+                <Button
+                    android:id="@+id/tab4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/public_twowordsbutton_background_selector"
+                    android:text="回家"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="#ffffff" />
+
+                <View
+                    android:id="@+id/view04"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#FFFFFF" />
+
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <com.quest.sias_prototype.ScrollLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.quest.sias_prototype.ScrollLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="onselect_color">#363636</color>
+    <color name="select_color">#000000</color>
+    <color name="white">#fff</color>
+    <color name="red">#FF0000</color>
+    <color name="gray">#77787B</color>
+    <color name="myfavor">#F0F0F0</color>
+    <color name="mapup">#FFB6C1</color>
+    <color name="lessonup">#00bfff</color>
+    <color name="matchup">#6A5ACD</color>
+    <color name="questup">#FF6100</color>
+    
+    <color name="black">#000000</color>
+    
+    <color name="group1">#7D26CD</color>
+    <color name="group2">#FFB6C1</color>
+    <color name="group3">#FF0000</color>
+    <color name="group4">#CDCD00</color>
+    <color name="group5">#A52A2A</color>
+    <color name="group6">#8B8682</color>
+    <color name="group7">#FFD700</color>
+    <color name="group8">#000000</color>
+    <color name="group9">#8B3E2F</color>
+    <color name="group10">#A4D3EE</color>
+    <color name="group11">#C1FFC1</color>
+    <color name="group12">#A020F0</color>
+    
+    
+    <color name="TextColor">#FFFFFF</color>
+    <color name="bgColor">#000000</color>
+    
+    
+    
+    
+</resources>

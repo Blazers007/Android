@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout02"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4.3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/Cet6Left"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.7"
+            android:background="@drawable/nothing_button_sector"
+            android:gravity="center"
+            android:onClick="queryCet6RankLeft"
+            android:text="&lt;"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/Cet6RankRegion"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="青铜"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/Cet6Right"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.7"
+            android:background="@drawable/nothing_button_sector"
+            android:gravity="center"
+            android:onClick="queryCet6RankRight"
+            android:text=">"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="10dp" >
+
+        <ListView
+            android:id="@+id/cet6RankList"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="#000000"
+            android:dividerHeight="1px"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:padding="5dp"
+            android:scrollbars="vertical" >
+
+        </ListView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/myCet6Layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/FriendListLayout_Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rankthird" />
+
+            <TextView
+                android:id="@+id/cet6_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Blazers" />
+
+            <TextView
+                android:id="@+id/cet6_grade"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Blazers" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/findCet6Button"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/nothing_button_sector"
+            android:onClick="findCet6"
+            android:text="查询英语成绩！" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout03"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4.3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/LolLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.7"
+            android:background="@drawable/nothing_button_sector"
+            android:gravity="center"
+            android:onClick="queryLolRankLeft"
+            android:text="&lt;"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/LolRankRegion"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="青铜"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/LolRight"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.7"
+            android:background="@drawable/nothing_button_sector"
+            android:gravity="center"
+            android:onClick="queryLolRankRight"
+            android:text=">"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="10dp" >
+
+        <ListView
+            android:id="@+id/lolRankList"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="#000000"
+            android:dividerHeight="1px"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:padding="5dp"
+            android:scrollbars="vertical" >
+
+        </ListView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/myLolLayout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/FriendListLayout_Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rankthird" />
+
+            <TextView
+                android:id="@+id/fightPlayerShow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Blazers" />
+
+            <TextView
+                android:id="@+id/fightPointShow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Blazers" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myLolLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Spinner
+                android:id="@+id/lol_net_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1" />
+
+            <Spinner
+                android:id="@+id/lol_realm_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/playerName"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:singleLine="true"
+                android:hint="角色"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/tab3_lol_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/nothing_button_sector"
+                android:onClick="findLol"
+                android:text="Fin" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+    
+    

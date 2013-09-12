@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.5"
+        android:background="#DCDCDC"
+        android:padding="2dp" >
+
+       <TextView
+           android:id="@+id/infoBar"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_weight="1"
+           android:background="#FFFAFA"
+           android:clickable="false"
+           android:onClick="profileActivity"
+           android:text="尚未登录,点击登陆"
+           android:textSize="12dip" />
+
+       <TextView
+           android:id="@+id/Main_MsgView"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_weight="3.4"
+           android:background="@drawable/mail"
+           android:clickable="false"
+           android:onClick="msgActivity"
+           android:gravity="center"
+           android:textAppearance="?android:attr/textAppearanceSmall" />
+
+       <Button
+           android:id="@+id/loginOrOutButton"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_gravity="right"
+           android:layout_weight="3.2"
+           android:background="@drawable/public_twowordsbutton_background_selector"
+           android:onClick="loginOrLogout"
+           android:text="登陆"
+           android:textSize="12dip" />
+
+    </LinearLayout>
+
+    <Gallery
+        android:id="@+id/mygallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.8"
+        android:background="#F0FFF0"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:alpha="15"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:paddingBottom="2dp" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:paddingRight="2dp" >
+
+                    <ImageButton
+                        android:id="@+id/startMapButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/main_mapact_sector"
+                        android:onClick="startMapActivity"
+                        android:scaleType="fitCenter"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        android:src="@raw/map" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="2dp" >
+
+                    <ImageButton
+                        android:id="@+id/startLessonButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/main_lessonact_sector"
+                        android:onClick="startLessonActivity"
+                        android:scaleType="fitCenter"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        android:src="@raw/lesson" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:paddingTop="2dp" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:paddingRight="2dp" >
+
+                    <ImageButton
+                        android:id="@+id/startMatchButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/main_matchact_sector"
+                        android:onClick="startMatchActivity"
+                        android:scaleType="fitCenter"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        android:src="@raw/match" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="2dp" >
+
+                    <ImageButton
+                        android:id="@+id/startQuestButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/main_questact_sector"
+                        android:onClick="startQuestActivity"
+                        android:scaleType="fitCenter"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        android:src="@raw/quest" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

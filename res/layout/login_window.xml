@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="284dp"
+        android:layout_height="128dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_launcher" />
+
+"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/Register_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="账号:"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/Register_Sign"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="密码:"
+                android:textColor="#000000" />
+            
+            <TextView
+                android:id="@+id/Register_Height"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="" />
+"
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+	         <EditText
+	             android:id="@+id/log_user"
+	             android:layout_width="fill_parent"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="1"
+	             android:gravity="center_vertical"
+	             android:hint="输入账号"
+	             android:textColor="#000000" 
+	             android:inputType="number" >
+
+	             <requestFocus />
+	         </EditText>
+
+	         <EditText
+	             android:id="@+id/log_pwd"
+	             android:layout_width="fill_parent"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="1"
+	             android:hint=" 输入密码"
+	             android:paddingLeft="5dp"
+	             android:paddingRight="5dp"
+	             android:inputType="textPassword"
+	             android:textColor="#000000" />
+
+	         <CheckBox
+	             android:id="@+id/log_save_or_not"
+	             android:layout_width="fill_parent"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="1"
+	             android:text="保存登录信息"
+	             android:textColor="#000000"
+	             android:textColorHint="#000000" />
+	       
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
