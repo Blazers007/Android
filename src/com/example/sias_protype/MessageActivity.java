@@ -140,7 +140,7 @@ public class MessageActivity extends Activity {
 		public void run() {
 			int msgWhat = 15;
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","QueryMsg")); //类型 注册信息
 			params.add(new BasicNameValuePair("ID",ID));//送入信息 有没有最大限制？？？？
@@ -219,7 +219,7 @@ public class MessageActivity extends Activity {
 			String sendMsg = json.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","SendMsg")); //类型 注册信息
 			params.add(new BasicNameValuePair("Info",sendMsg));//送入信息 有没有最大限制？？？？
@@ -268,7 +268,7 @@ public class MessageActivity extends Activity {
 			public void run() {
 				int msgWhat = 18;
 				HttpClient hc = new DefaultHttpClient();
-				HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+				HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 				params.add(new BasicNameValuePair("type","ACKMsg")); //类型 注册信息
 				params.add(new BasicNameValuePair("ID",ID));//送入信息 有没有最大限制？？？？

@@ -28,6 +28,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.ActionBar.LayoutParams;
@@ -201,7 +202,7 @@ public class MainActivity extends Activity {
 	//1.5. 这是读取本地登录信息参数的函数 
 	////////////////////////////////////////////////////////////////////////////
 	boolean hasLocalLogInfo(){
-		File file = new File("/sdcard/Sias_log.txt");//存储APP信息的路径
+		File file = new File("/sdcard/SiasPro/Control/Sias_log.txt");//存储APP信息的路径
 		if(file.exists()){//如果有文件 就读取文件信息
 			try {
 				BufferedReader in = new BufferedReader(new FileReader(file));
@@ -248,9 +249,10 @@ public class MainActivity extends Activity {
 	//		   startQuestActivity
 	//////////////////////////////////////////////////////////////////////////////////////////
 		public void startMapActivity(View view){
-			Intent intent = new Intent(this,MapActivity.class);
+//			Intent intent = new Intent(this,MapActivity.class);
 //			Intent intent = new Intent(this,FriendActivity.class);
 //			Intent intent = new Intent(this,RegisterActivity.class);
+			Intent intent = new Intent(this,ChatActivity.class);
 			//在此加入需要传入的参数 如上次查询的地图信息 等等
 			//1 开启MAP act 的时候从本地读取上次的查询信息 然后传出 startIntent
 			startActivity(intent); 
@@ -370,7 +372,7 @@ public class MainActivity extends Activity {
 					log_state = true;
 					if(infoSave.isChecked()){//如果保存信息被选中 则写入信息中
 						try {
-							File file = new File("/sdcard/Sias_log.txt");
+							File file = new File("/sdcard/SiasPro/Control/Sias_log.txt");
 							FileOutputStream fout = new FileOutputStream(file);
 							String aboutToWrite = user+"#"+password+"#"+"Blazers";
 							fout.write(aboutToWrite.getBytes());
@@ -462,102 +464,61 @@ public class MainActivity extends Activity {
 					String viewState = null;
 					boolean logSuccess = false;
 					int msgWhat = 1;
-					try{
-						System.out.println("start try");
-						HttpGet getViewState = new HttpGet("http://jwgl.sias.edu.cn");
-						getViewState.setHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-						getViewState.setHeader("Accept-Encoding	","gzip, deflate");
-						getViewState.setHeader("Accept-Language","zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3");
-						getViewState.setHeader("Cache-Control","max-age=0");
-						getViewState.setHeader("Connection", "keep-alive");
-						getViewState.setHeader("DNT","1");
-						getViewState.setHeader("Host","218.198.176.91");
-						getViewState.setHeader("User-Agent","Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0");
-						HttpResponse gotViewState = new DefaultHttpClient().execute(getViewState);
-						HttpEntity viewEntity = gotViewState.getEntity();
-						InputStream viewIs = viewEntity.getContent();
-						StringBuilder sb = new StringBuilder();
-						while(true){
-							byte[] buffer = new byte[102400];
-							int len = viewIs.read(buffer);
-							if(len == -1)
-								break;
-							sb.append((new String(buffer,0,len,"GB2312")));
-						}
-//						System.out.println(sb.toString());
-						String pattern = "<input type=\"hidden\" name=\"__VIEWSTATE\" value=\"(.*?)\" />";
-						Pattern reg = Pattern.compile(pattern);
-						Matcher match = reg.matcher(sb.toString());
-						while(match.find())
-							viewState = match.group(1);
-						System.out.println(viewState);
-					}catch(Exception ex){
-						msgWhat = 0;
-						// add throw out alert!
-					}
-//						System.out.println(viewState);
-					String temp = null;//用来保存返回的信息！！！
-					List<Cookie> cookies = null; //建立一个存放 Cookie 的列表
-					HttpClient client = new DefaultHttpClient();//声明一个 HttpClient 用于执行访问Request
-					HttpResponse httpResponse = null;
-					String url = "http://jwgl.sias.edu.cn/default2.aspx";
-					HttpPost httpRequest = new HttpPost(url);
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("Button1",""));
-					params.add(new BasicNameValuePair("RadioButtonList1","%D1%A7%C9%FA"));
-					params.add(new BasicNameValuePair("TextBox1",user));//设置账户
-					params.add(new BasicNameValuePair("TextBox2",password));//设置密码
-					params.add(new BasicNameValuePair("__VIEWSTATE",viewState));//填入获取的VIEWSTATE
-					params.add(new BasicNameValuePair("lbLanguage",""));
-					httpRequest.setHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-					httpRequest.setHeader("Accept-Encoding	","gzip, deflate");
-					httpRequest.setHeader("Accept-Language",	"zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3");
-					httpRequest.setHeader("Cache-Control",	"max-age=0");
-					httpRequest.setHeader("Connection", "keep-alive");
-					httpRequest.setHeader("DNT","1");
-					httpRequest.setHeader("Host","218.198.176.91");
-					httpRequest.setHeader("Referer","http://218.198.176.91/");
-					httpRequest.setHeader("User-Agent","Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0");
-					try {
-						// 发出HTTP request
-						httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
-						// 取得HTTP response
-						httpResponse = client.execute(httpRequest);   //执行
-						// 若状态码为200 ok
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {   //返回值正常 不能判断是否成功登陆！
-							// 获取返回的cookie
-							cookies = ((AbstractHttpClient) client).getCookieStore().getCookies();
-							//获取返回的信息 并进行简单解析
-							StringBuffer sb = new StringBuffer();
-							HttpEntity entity = httpResponse.getEntity();
-							InputStream is = entity.getContent();
-							while(true){
-								byte[] buffer = new byte[102400];
-								int len = is.read(buffer);
-								if(len == -1)
-									break;
-								sb.append(new String(buffer,0,len,"GB2312"));
-								System.out.println("downloading!!");
-								}
-							temp = sb.toString();
-//							System.out.println(temp);
-							//下面来解析temp看是否登陆成功！
-							String pattern = "<span id=\"Label3\">(.*?)</span>";
-							Pattern reg = Pattern.compile(pattern);
-							Matcher match = reg.matcher(temp);
-							while(match.find()){
-								logSuccess = true;
-								System.out.println(match.group(1));
-							}
+						JSONObject jsonSend = new JSONObject();
+						try {
+							jsonSend.put("user", user);
+							jsonSend.put("password", password);
 							
-						} else {//若状态不是200 则访问失败
-							//访问失败
-							msgWhat = 0;
+						} catch (JSONException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
 						}
-					} catch (Exception e) {
-						e.printStackTrace();
-						msgWhat = 0;
-					}
+						String info = jsonSend.toString();
+						
+						HttpClient hc = new DefaultHttpClient();
+						HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
+						List<NameValuePair> params = new ArrayList<NameValuePair>();
+						params.add(new BasicNameValuePair("type","LoginAndQuerys"));
+						params.add(new BasicNameValuePair("Info",info));
+//						hc.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 8000);
+//						hc.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 8000);
+						hp.setHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");//很重要！！！
+						HttpResponse hr = null;
+						try {
+							// 发出HTTP request
+							hp.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+							// 取得HTTP response
+							hr = hc.execute(hp);   //执行
+							// 若状态码为200 ok
+							if (hr.getStatusLine().getStatusCode() == 200) {   //返回值正常
+								HttpEntity entity = hr.getEntity();
+								InputStream is = entity.getContent();
+								StringBuffer sb = new StringBuffer();
+								while(true){
+									byte[] buffer = new byte[10240];
+									int len = is.read(buffer);
+									if(len == -1)
+										break;
+									sb.append(new String(buffer,0,len,"utf-8"));
+								}
+								//////////////查找结果为空！怎么办
+								
+								///////////////
+								JSONArray jsonArray = new JSONArray(sb.toString());
+								if(jsonArray.getJSONObject(0).has("State")){
+									if(jsonArray.getJSONObject(0).getString("State").equals("Success"))
+										logSuccess = true;
+								}else{
+									logSuccess = false;
+								}
+							} else {
+								msgWhat = 0;
+								System.out.println("connect failed!");
+							}
+						} catch (Exception e) {
+							msgWhat = 0;
+							e.printStackTrace();
+						}
 					//判断是否获取到httpResponse 的结果来判断是否登陆成功！！！
 					if(!logSuccess){
 						Message msg = new Message();
@@ -569,7 +530,6 @@ public class MainActivity extends Activity {
 						AllInfomation allInfo = ((AllInfomation)getApplication());
 						allInfo.setUser(user);
 						allInfo.setPassword(password);
-						allInfo.setCookies(cookies);
 						allInfo.setLogState(true); //设置全局变量！
 						threadHandler.sendMessage(msg);
 					}
@@ -584,7 +544,7 @@ public class MainActivity extends Activity {
 			public void run() {
 				int msgWhat = 3;//3表示查询成功已经注册
 				HttpClient hc = new DefaultHttpClient();
-				HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+				HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 				params.add(new BasicNameValuePair("type","QueryUserInfo"));
 				params.add(new BasicNameValuePair("ID",user));
@@ -633,7 +593,7 @@ public class MainActivity extends Activity {
 			public void run() {
 				int msgWhat = 15;
 				HttpClient hc = new DefaultHttpClient();
-				HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+				HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 				List<NameValuePair> params = new ArrayList<NameValuePair>();
 				params.add(new BasicNameValuePair("type","QueryMsg")); //类型 注册信息
 				params.add(new BasicNameValuePair("ID",user));//送入信息 有没有最大限制？？？？
@@ -703,7 +663,7 @@ public class MainActivity extends Activity {
 					public void run() {
 						int msgWhat = 18;
 						HttpClient hc = new DefaultHttpClient();
-						HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+						HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 						List<NameValuePair> params = new ArrayList<NameValuePair>();
 						params.add(new BasicNameValuePair("type","ACKMsg")); //类型 注册信息
 						params.add(new BasicNameValuePair("ID",user));//送入信息 有没有最大限制？？？？
@@ -745,3 +705,101 @@ public class MainActivity extends Activity {
 					
 				};
 }
+
+//废弃代码 以后可能有用
+//try{
+//	System.out.println("start try");
+//	HttpGet getViewState = new HttpGet("http://jwgl.sias.edu.cn");
+//	getViewState.setHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+//	getViewState.setHeader("Accept-Encoding	","gzip, deflate");
+//	getViewState.setHeader("Accept-Language","zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3");
+//	getViewState.setHeader("Cache-Control","max-age=0");
+//	getViewState.setHeader("Connection", "keep-alive");
+//	getViewState.setHeader("DNT","1");
+//	getViewState.setHeader("Host","218.198.176.91");
+//	getViewState.setHeader("User-Agent","Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0");
+//	HttpResponse gotViewState = new DefaultHttpClient().execute(getViewState);
+//	HttpEntity viewEntity = gotViewState.getEntity();
+//	InputStream viewIs = viewEntity.getContent();
+//	StringBuilder sb = new StringBuilder();
+//	while(true){
+//		byte[] buffer = new byte[102400];
+//		int len = viewIs.read(buffer);
+//		if(len == -1)
+//			break;
+//		sb.append((new String(buffer,0,len,"GB2312")));
+//	}
+////	System.out.println(sb.toString());
+//	String pattern = "<input type=\"hidden\" name=\"__VIEWSTATE\" value=\"(.*?)\" />";
+//	Pattern reg = Pattern.compile(pattern);
+//	Matcher match = reg.matcher(sb.toString());
+//	while(match.find())
+//		viewState = match.group(1);
+//	System.out.println(viewState);
+//}catch(Exception ex){
+//	msgWhat = 0;
+//	// add throw out alert!
+//}
+////	System.out.println(viewState);
+//String temp = null;//用来保存返回的信息！！！
+//List<Cookie> cookies = null; //建立一个存放 Cookie 的列表
+//HttpClient client = new DefaultHttpClient();//声明一个 HttpClient 用于执行访问Request
+//HttpResponse httpResponse = null;
+//String url = "http://jwgl.sias.edu.cn/default2.aspx";
+//HttpPost httpRequest = new HttpPost(url);
+//List<NameValuePair> params = new ArrayList<NameValuePair>();
+//params.add(new BasicNameValuePair("Button1",""));
+//params.add(new BasicNameValuePair("RadioButtonList1","%D1%A7%C9%FA"));
+//params.add(new BasicNameValuePair("TextBox1",user));//设置账户
+//params.add(new BasicNameValuePair("TextBox2",password));//设置密码
+//params.add(new BasicNameValuePair("__VIEWSTATE",viewState));//填入获取的VIEWSTATE
+//params.add(new BasicNameValuePair("lbLanguage",""));
+//httpRequest.setHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+//httpRequest.setHeader("Accept-Encoding	","gzip, deflate");
+//httpRequest.setHeader("Accept-Language",	"zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3");
+//httpRequest.setHeader("Cache-Control",	"max-age=0");
+//httpRequest.setHeader("Connection", "keep-alive");
+//httpRequest.setHeader("DNT","1");
+//httpRequest.setHeader("Host","218.198.176.91");
+//httpRequest.setHeader("Referer","http://218.198.176.91/");
+//httpRequest.setHeader("User-Agent","Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0");
+//try {
+//	// 发出HTTP request
+//	httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+//	// 取得HTTP response
+//	httpResponse = client.execute(httpRequest);   //执行
+//	// 若状态码为200 ok
+//	if (httpResponse.getStatusLine().getStatusCode() == 200) {   //返回值正常 不能判断是否成功登陆！
+//		// 获取返回的cookie
+//		cookies = ((AbstractHttpClient) client).getCookieStore().getCookies();
+//		//获取返回的信息 并进行简单解析
+//		StringBuffer sb = new StringBuffer();
+//		HttpEntity entity = httpResponse.getEntity();
+//		InputStream is = entity.getContent();
+//		while(true){
+//			byte[] buffer = new byte[102400];
+//			int len = is.read(buffer);
+//			if(len == -1)
+//				break;
+//			sb.append(new String(buffer,0,len,"GB2312"));
+//			System.out.println("downloading!!");
+//			}
+//		temp = sb.toString();
+////		System.out.println(temp);
+//		//下面来解析temp看是否登陆成功！
+//		String pattern = "<span id=\"Label3\">(.*?)</span>";
+//		Pattern reg = Pattern.compile(pattern);
+//		Matcher match = reg.matcher(temp);
+//		while(match.find()){
+//			logSuccess = true;
+//			System.out.println(match.group(1));
+//		}
+//		
+//	} else {//若状态不是200 则访问失败
+//		//访问失败
+//		msgWhat = 0;
+//	}
+//} catch (Exception e) {
+//	e.printStackTrace();
+//	msgWhat = 0;
+//}

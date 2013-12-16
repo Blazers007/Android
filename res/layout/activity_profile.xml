@@ -288,20 +288,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp" >
 
-        <Button
+        <ImageButton
             android:id="@+id/Profile_UploadImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="85dp"
             android:onClick="haveAFight"
-            android:text="对♂比！" />
+            android:src="@drawable/user_ok" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Profile_ShowList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="friendlist"
-            android:text="关注列表" />
+            android:src="@drawable/user_friend" />
 
     </LinearLayout>
 
@@ -309,20 +309,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
+        <ImageButton
             android:id="@+id/Profile_Add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="85dp"
             android:onClick="addfriend"
-            android:text="加为关注" />
+            android:src="@drawable/user_add" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Profile_Send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="sendmessage"
-            android:text="发送信息" />
+            android:src="@drawable/user_chat" />
 
     </LinearLayout>
 

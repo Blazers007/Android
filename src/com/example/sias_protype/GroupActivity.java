@@ -202,7 +202,7 @@ public class GroupActivity extends Activity {
 			String info = jsonSend.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","QueryGroup"));
 			params.add(new BasicNameValuePair("Info",info));
@@ -282,7 +282,7 @@ public class GroupActivity extends Activity {
 			String info = jsonSend.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","QueryIfCheckedIn"));
 			params.add(new BasicNameValuePair("Info",info));
@@ -358,7 +358,7 @@ public class GroupActivity extends Activity {
 			String info = jsonSend.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","CheckIn"));
 			params.add(new BasicNameValuePair("Info",info));
@@ -436,7 +436,7 @@ public class GroupActivity extends Activity {
 			String info = jsonSend.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","SignDaily"));
 			params.add(new BasicNameValuePair("Info",info));
@@ -511,7 +511,7 @@ public class GroupActivity extends Activity {
 			String info = jsonSend.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","CheckOut"));
 			params.add(new BasicNameValuePair("Info",info));

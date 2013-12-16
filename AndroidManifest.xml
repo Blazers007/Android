@@ -95,5 +95,10 @@
             android:name="com.example.sias_protype.WelcomeScrollLayout"
             android:label="@string/title_activity_welcome_scroll_layout" >
         </activity>
+        <activity
+            android:name="com.example.sias_protype.WeiboActivity"
+            android:label="@string/title_activity_weibo" >
+        </activity>
     </application>
+
 </manifest>

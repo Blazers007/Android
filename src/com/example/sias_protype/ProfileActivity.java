@@ -33,8 +33,8 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
@@ -68,11 +68,11 @@ public class ProfileActivity extends Activity {
 	private RatingBar skinRate = null;
 	private RatingBar faceRate = null;
 	////////////////////////////////控制发送信息 跟加为好友
-	private Button addFriendView = null;
+	private ImageButton addFriendView = null;
 	private boolean ifHasAdd;
-	private Button sendMessageView = null;
-	private Button uploadImgView = null;
-	private Button showListView = null;
+	private ImageButton sendMessageView = null;
+	private ImageButton uploadImgView = null;
+	private ImageButton showListView = null;
 	private String messageToSend= null;//获取信息
 	private String myID = null;
 	private String ID = "";
@@ -109,10 +109,10 @@ public class ProfileActivity extends Activity {
 		skinRate.setRating(2);
 		faceRate.setRating(5);
 		
-		addFriendView = (Button)findViewById(R.id.Profile_Add);
-		sendMessageView = (Button)findViewById(R.id.Profile_Send);
-		uploadImgView = (Button)findViewById(R.id.Profile_UploadImg);
-		showListView = (Button)findViewById(R.id.Profile_ShowList);
+		addFriendView = (ImageButton)findViewById(R.id.Profile_Add);
+		sendMessageView = (ImageButton)findViewById(R.id.Profile_Send);
+		uploadImgView = (ImageButton)findViewById(R.id.Profile_UploadImg);
+		showListView = (ImageButton)findViewById(R.id.Profile_ShowList);
 		
 		
 		Intent intent = this.getIntent();//获取intent 或者从 all中读取
@@ -214,14 +214,16 @@ public class ProfileActivity extends Activity {
 				System.out.println("Connect failed");
 				break;
 			case 3:
-				addFriendView.setText("取消关注");
+//				addFriendView.setText("取消关注");
+				addFriendView.setImageResource(R.drawable.user_delete);
 				ifHasAdd = true;
 				break;
 			case 15:
 				System.out.println("Has not add friend!");
 				break;
 			case 16://已经添加好友
-				addFriendView.setText("取消关注");
+//				addFriendView.setText("取消关注");
+				addFriendView.setImageResource(R.drawable.user_delete);
 				ifHasAdd = true;
 				break;
 			case 17:
@@ -234,7 +236,8 @@ public class ProfileActivity extends Activity {
 				
 			case 20:
 				Toast.makeText(ProfileActivity.this, "取消关注成功！", 2000).show();
-				addFriendView.setText("加为关注");
+//				addFriendView.setText("加为关注");
+				addFriendView.setImageResource(R.drawable.user_add);
 				ifHasAdd = false;
 				break;	
 				
@@ -259,7 +262,7 @@ public class ProfileActivity extends Activity {
 		public void run() {
 			int msgWhat = 0;
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","QueryUserInfo"));
 			params.add(new BasicNameValuePair("ID",ID));
@@ -331,7 +334,7 @@ public class ProfileActivity extends Activity {
 			String sendMsg = json.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","AddFriend")); //类型 注册信息
 			params.add(new BasicNameValuePair("Info",sendMsg));//送入信息 有没有最大限制？？？？
@@ -389,7 +392,7 @@ public class ProfileActivity extends Activity {
 			String sendMsg = json.toString();
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","SendMsg")); //类型 注册信息
 			params.add(new BasicNameValuePair("Info",sendMsg));//送入信息 有没有最大限制？？？？
@@ -436,7 +439,7 @@ public class ProfileActivity extends Activity {
 		public void run() {
 			int msgWhat = 17;
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","QueryIfHasAdd")); //类型 注册信息
 			params.add(new BasicNameValuePair("ID",myID));//送入信息 有没有最大限制？？？？
@@ -485,7 +488,7 @@ public class ProfileActivity extends Activity {
 		public void run() {
 			int msgWhat = 20;
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","MinFriend")); //类型 注册信息
 			params.add(new BasicNameValuePair("ID",myID));//送入信息 有没有最大限制？？？？
@@ -578,7 +581,7 @@ public class ProfileActivity extends Activity {
 		public void run() {
 			int msgWhat = 21;
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","QueryUserGroups"));
 			params.add(new BasicNameValuePair("ID",groupID));
@@ -648,7 +651,7 @@ public class ProfileActivity extends Activity {
 	        String boundary = "---------------------------265001916915724";
 	        // 真机调试的话，这里url需要改成电脑ip
 	        // 模拟机用10.0.0.2,127.0.0.1被tomcat占用了
-	        String urlServer = "http://106.3.44.26:8080/ServerForSias/upload";
+	        String urlServer = "http://192.168.163.1:8080/ServerForSias/upload";
 	        String lineEnd = "\r\n";
 	        String pathOfPicture = "/sdcard/bosschen.jpg";
 	        int bytesAvailable, bufferSize, bytesRead;

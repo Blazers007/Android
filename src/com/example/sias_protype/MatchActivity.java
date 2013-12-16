@@ -403,20 +403,14 @@ public class MatchActivity extends Activity {
 	////////////////////////////////////本地文件操作区域/////////////////////////
 	boolean ifHasLocal(){
 		boolean allRight = true;
-		File dir1 = new File("/sdcard/BlazersSias");
-		if(!dir1.exists())
-			dir1.mkdir();
-		File dir2 = new File("/sdcard/BlazersSias/Sias_Match");
-		if(!dir2.exists())
-			dir2.mkdir();
-		File file1 = new File("/sdcard/BlazersSias/Sias_Match/Cet4_Rank.txt");
-		File file2 = new File("/sdcard/BlazersSias/Sias_Match/Cet4_My.txt");
-		File file3 = new File("/sdcard/BlazersSias/Sias_Match/Cet4_Choose.txt");
-		File file4 = new File("/sdcard/BlazersSias/Sias_Match/Cet6_Rank.txt");
-		File file5 = new File("/sdcard/BlazersSias/Sias_Match/Cet6_My.txt");
-		File file6 = new File("/sdcard/BlazersSias/Sias_Match/Cet6_Choose.txt");
-		File file7 = new File("/sdcard/BlazersSias/Sias_Match/Lol_Rank.txt");
-		File file8 = new File("/sdcard/BlazersSias/Sias_Match/Lol_choose.txt");
+		File file1 = new File("/sdcard/SiasPro/Control/Cet4_Rank.txt");
+		File file2 = new File("/sdcard/SiasPro/Control/Cet4_My.txt");
+		File file3 = new File("/sdcard/SiasPro/Control/Cet4_Choose.txt");
+		File file4 = new File("/sdcard/SiasPro/Control/Cet6_Rank.txt");
+		File file5 = new File("/sdcard/SiasPro/Control/Cet6_My.txt");
+		File file6 = new File("/sdcard/SiasPro/Control/Cet6_Choose.txt");
+		File file7 = new File("/sdcard/SiasPro/Control/Lol_Rank.txt");
+		File file8 = new File("/sdcard/SiasPro/Control/Lol_choose.txt");
 //		List<File> fileList = new ArrayList<File>();
 		File[] fileList = {file1,file2,file3,file4,file5,file6,file7,file8};
 		for(int i = 0 ; i < 8 ; i ++){
@@ -484,7 +478,7 @@ public class MatchActivity extends Activity {
 					break;
 				case 2://查询6级成绩  那么在此应该弹出一个框来让其选择绑定那个成绩！
 					waitAlert.dismiss();
-					writeToLocal(finalCetGrade,"/sdcard/BlazersSias/Sias_Match/Cet6_My.txt");// 写入本地
+					writeToLocal(finalCetGrade,"/sdcard/SiasPro/Control/Cet6_My.txt");// 写入本地
 					ListView popListBand = null;
 					final ArrayList<HashMap<String,String>> popListBandAdapter = new ArrayList<HashMap<String,String>>(); //多个List来装入六级成绩
 					String[] exams = finalCetGrade.split("@"); //按次分开
@@ -532,7 +526,7 @@ public class MatchActivity extends Activity {
 								TextView cet6Grade = (TextView)findViewById(R.id.cet6_grade);
 								findCet6Button.setVisibility(View.GONE);
 								cet6Name.setText(XH);//设置名称！
-								writeToLocal("MyRank"+"#"+"MyName"+"#"+popListBandAdapter.get(selectId).get("5"),"/sdcard/BlazersSias/Sias_Match/Cet6_Choose");
+								writeToLocal("MyRank"+"#"+"MyName"+"#"+popListBandAdapter.get(selectId).get("5"),"/sdcard/SiasPro/Control/Cet6_Choose");
 								cet6Grade.setText(popListBandAdapter.get(selectId).get("5"));//吧总分输出出去
 								myCet6Layout.setVisibility(View.VISIBLE);
 								//另外还要向服务器传输绑定的信息！ String region,String ID,String Server,String Name,String Score,int msgWhat
@@ -556,7 +550,7 @@ public class MatchActivity extends Activity {
 					break;
 				case 3:
 					waitAlert.dismiss();
-					writeToLocal(finalCetGrade,"/sdcard/BlazersSias/Sias_Match/Cet4_My.txt");// 写入本地
+					writeToLocal(finalCetGrade,"/sdcard/SiasPro/Control/Cet4_My.txt");// 写入本地
 					ListView popListBand1 = null;
 					final ArrayList<HashMap<String,String>> popListBandAdapter1 = new ArrayList<HashMap<String,String>>(); //多个List来装入六级成绩
 					String[] exams1 = finalCetGrade.split("@"); //按次分开
@@ -604,7 +598,7 @@ public class MatchActivity extends Activity {
 								TextView cet4Grade = (TextView)findViewById(R.id.cet4_grade);
 								findCet4Button.setVisibility(View.GONE);
 								cet4Name.setText(XH);//设置名称！
-								writeToLocal("MyRank"+"#"+"MyName"+"#"+popListBandAdapter1.get(selectId).get("5"),"/sdcard/BlazersSias/Sias_Match/Cet4_Choose");
+								writeToLocal("MyRank"+"#"+"MyName"+"#"+popListBandAdapter1.get(selectId).get("5"),"/sdcard/SiasPro/Control/Cet4_Choose");
 								cet4Grade.setText(popListBandAdapter1.get(selectId).get("5"));//吧总分输出出去
 								myCet4Layout.setVisibility(View.VISIBLE);
 								//另外还要向服务器传输绑定的信息！
@@ -906,14 +900,14 @@ public class MatchActivity extends Activity {
 
 		@Override
 		public void run() {
-			File file1 = new File("/sdcard/BlazersSias/Sias_Match/Cet4_Rank.txt");
-			File file2 = new File("/sdcard/BlazersSias/Sias_Match/Cet4_My.txt");
-			File file3 = new File("/sdcard/BlazersSias/Sias_Match/Cet4_Choose.txt");
-			File file4 = new File("/sdcard/BlazersSias/Sias_Match/Cet6_Rank.txt");
-			File file5 = new File("/sdcard/BlazersSias/Sias_Match/Cet6_My.txt");
-			File file6 = new File("/sdcard/BlazersSias/Sias_Match/Cet6_Choose.txt");
-			File file7 = new File("/sdcard/BlazersSias/Sias_Match/Lol_Rank.txt");
-			File file8 = new File("/sdcard/BlazersSias/Sias_Match/Lol_choose.txt");
+			File file1 = new File("/sdcard/SiasPro/Control/Cet4_Rank.txt");
+			File file2 = new File("/sdcard/SiasPro/Control/Cet4_My.txt");
+			File file3 = new File("/sdcard/SiasPro/Control/Cet4_Choose.txt");
+			File file4 = new File("/sdcard/SiasPro/Control/Cet6_Rank.txt");
+			File file5 = new File("/sdcard/SiasPro/Control/Cet6_My.txt");
+			File file6 = new File("/sdcard/SiasPro/Control/Cet6_Choose.txt");
+			File file7 = new File("/sdcard/SiasPro/Control/Lol_Rank.txt");
+			File file8 = new File("/sdcard/SiasPro/Control/Lol_choose.txt");
 			try {
 				BufferedReader in = new BufferedReader(new FileReader(file5));
 				String line = null;
@@ -951,7 +945,7 @@ public class MatchActivity extends Activity {
 		public void run() {
 			threadLock = false;
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","Query"));
 			params.add(new BasicNameValuePair("region",region));
@@ -1034,9 +1028,8 @@ public class MatchActivity extends Activity {
 		}
 		@Override
 		public void run() {
-			HttpClient hc = new DefaultHttpClient();
-//			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpClient hc = new DefaultHttpClient();	
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","Update"));
 			params.add(new BasicNameValuePair("region",region));

@@ -148,7 +148,7 @@ public class FriendActivity extends Activity {
 		public void run() {
 			int msgWhat = 0;
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","QueryFriendList"));
 			params.add(new BasicNameValuePair("ID",ID));
@@ -218,7 +218,7 @@ public class FriendActivity extends Activity {
 		waitAlert.show();
 	}
 	
-	public void finishActivity(View view){
+	public void findUser(View view){
 		this.finish();
 	}
 	class FriendView{

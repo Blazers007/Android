@@ -21,14 +21,28 @@
         android:layout_height="fill_parent"
         android:layout_weight="10" >
 
-        <ImageButton
-            android:id="@+id/ImageButton1"
-            android:layout_width="45dp"
-            android:layout_height="fill_parent"
-            android:background="@drawable/nothing_button_sector"
-            android:onClick="showList"
-            android:scaleType="center"
-            android:src="@drawable/blue_velvet_062" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/ImageButton1"
+                android:layout_width="45dp"
+                android:layout_height="40px"
+                android:background="@drawable/nothing_button_sector"
+                android:onClick="showList"
+                android:paddingTop="12dp"
+                android:src="@drawable/user_download" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Refresh"
+                android:textSize="8dp" 
+                android:gravity="center"/>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/MatchListDetail_ID"
@@ -37,16 +51,31 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="好友列表"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textSize="10dp" />
 
-        <ImageButton
-            android:id="@+id/ImageButton1"
-            android:layout_width="42dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@drawable/nothing_button_sector"
-            android:onClick="finishActivity"
-            android:scaleType="center"
-            android:src="@drawable/blue_velvet_079" />
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/ImageButton1"
+                android:layout_width="42dp"
+                android:layout_height="40px"
+                android:background="@drawable/nothing_button_sector"
+                android:onClick="findUser"
+                android:paddingTop="12dp"
+                android:scaleType="center"
+                android:src="@drawable/user_find" />
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Find"
+                android:textSize="8dp" 
+                android:gravity="center"/>
+
+        </LinearLayout>
 
     </LinearLayout>
     

@@ -341,7 +341,7 @@ public class LessonActivity extends Activity {
 	
 	////本地
 	public boolean hasLocalLessonInfo(){
-		File fileS = new File("/sdcard/Sias_lesson.txt");//存储APP信息的路径
+		File fileS = new File("/sdcard/SiasPro/Control/Sias_lesson.txt");//存储APP信息的路径
 		if(fileS.exists()){//如果有文件 就读取文件信息
 			try {
 				BufferedReader in = new BufferedReader(new FileReader(fileS));//这里仅仅检测儋州的文件
@@ -378,7 +378,7 @@ public class LessonActivity extends Activity {
 	}
 	
 	public void readLocalLesson(){
-		File file = new File("/sdcard/Sias_lesson.txt");
+		File file = new File("/sdcard/SiasPro/Control/Sias_lesson.txt");
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(file));
 			String line = null;
@@ -421,9 +421,9 @@ public class LessonActivity extends Activity {
 				time += 2;
 			}
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			file.delete();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			file.delete();
 			e.printStackTrace();
 		}
 		
@@ -434,7 +434,7 @@ public class LessonActivity extends Activity {
 	
 	public void writeToLocalFile(String write){
 		try {
-			File file = new File("/sdcard/Sias_lesson.txt");
+			File file = new File("/sdcard/SiasPro/Control/Sias_lesson.txt");
 
 			FileOutputStream fout = new FileOutputStream(file);
 

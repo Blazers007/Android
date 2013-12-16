@@ -323,7 +323,7 @@ public class RegisterActivity extends Activity {
 			
 			
 			HttpClient hc = new DefaultHttpClient();
-			HttpPost hp = new HttpPost("http://106.3.44.26:8080/ServerForSias/search121736");
+			HttpPost hp = new HttpPost("http://192.168.163.1:8080/ServerForSias/search121736");
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("type","Register")); //类型 注册信息
 			params.add(new BasicNameValuePair("Info",sendMsg));//送入信息 有没有最大限制？？？？

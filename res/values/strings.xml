@@ -26,5 +26,10 @@
     <string name="title_activity_welcome">WelcomeActivity</string>
     <string name="title_activity_welcome_scroll_layout">WelcomeScrollLayout</string>
     <string name="title_activity_rukou">SiasPro</string>
+    <string name="app_list_footer_more">more</string>
+    <string name="app_list_header_refresh_last_update">update</string>
+    <string name="app_list_header_refresh_down">down</string>
+    <string name="app_list_footer_loading">loading</string>
+    <string name="title_activity_weibo">WeiboActivity</string>
 
 </resources>
